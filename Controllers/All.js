@@ -13,3 +13,20 @@
 // });
 
 // module.exports = all;
+
+
+// Types of occupation:
+'gladiator'
+'mermaid'
+'bandit'
+'animal'
+'noble'
+'revolutionary'
+'shandorian'
+'samurai'
+'billions agent'
+'punk hazard child'
+'prisoner'
+'civilian'
+'sabaody civilian'
+'dressrosa civilian'

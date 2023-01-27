@@ -15,7 +15,12 @@ const getAllData = async () => {
 // Show page that doesnt work
 const getDevilFruit = async (id) => {
     try {
-      const devilFruit = await db.one("SELECT * FROM df WHERE id=$1", id);
+      const devilFruit = await db.one(`
+      SELECT * FROM devil_fruits 
+      JOIN types_of_devilFruits
+      ON devil_fruits.type_of_fruit = types_of_devilFruits.id
+      WHERE devil_fruits.id=$1`, id
+      );
       return devilFruit;
     } catch (err) {
       return err;
