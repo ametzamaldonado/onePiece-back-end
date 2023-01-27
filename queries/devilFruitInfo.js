@@ -12,6 +12,7 @@ const getAllData = async () => {
 }
 
 // trying to get devil fruit by ID <-- doesn't work 
+// Show page that doesnt work
 const getDevilFruit = async (id) => {
     try {
       const devilFruit = await db.one("SELECT * FROM df WHERE id=$1", id);
