@@ -30,3 +30,8 @@
 'civilian'
 'sabaody civilian'
 'dressrosa civilian'
+'alabastian'
+'king'
+'wano civilian'
+'sumo wrestler'
+'vegapunk'

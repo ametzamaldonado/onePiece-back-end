@@ -10,7 +10,7 @@ CREATE TABLE all_Characters (
     canon BOOLEAN,
     pirate BOOLEAN,
     marine BOOLEAN,
-    other TEXT, --
+    other TEXT, 
     photo TEXT,
     devil_fruitID INTEGER REFERENCES devil_fruits (id),
     pirate_groupID INTEGER REFERENCES pirate_GroupNames (id),
