@@ -3,7 +3,13 @@ const db = require("../db/dbConfig");
 const getAllData = async () => {
     try{
         const allData = await db.any(
-          "SELECT df.*, tdF.name AS type_name, tdF.sub_type AS type_subType, tdF.rare AS type_rare FROM devil_fruits df JOIN types_of_devilFruits tdF ON df.type_of_fruit = tdf.id"
+          `SELECT df.*, 
+            tdF.name AS type_name, 
+            tdF.sub_type AS type_subType, 
+            tdF.rare AS type_rare 
+          FROM devil_fruits df 
+          JOIN types_of_devilFruits tdF 
+          ON df.type_of_fruit = tdf.id`
         );
         return allData;
     }catch (err){
@@ -11,15 +17,18 @@ const getAllData = async () => {
     }
 }
 
-// trying to get devil fruit by ID <-- doesn't work 
-// Show page that doesnt work
+// Show page
 const getDevilFruit = async (id) => {
     try {
-      const devilFruit = await db.one(`
-      SELECT * FROM devil_fruits 
-      JOIN types_of_devilFruits
-      ON devil_fruits.type_of_fruit = types_of_devilFruits.id
-      WHERE devil_fruits.id=$1`, id
+      const devilFruit = await db.one(
+        `SELECT df.*, 
+          tdF.name AS type_name, 
+          tdF.sub_type AS type_subType, 
+          tdF.rare AS type_rare 
+        FROM devil_fruits df 
+        JOIN types_of_devilFruits tdF 
+        ON df.type_of_fruit = tdf.id
+        WHERE df.id=$1`, id
       );
       return devilFruit;
     } catch (err) {

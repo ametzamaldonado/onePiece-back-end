@@ -2,7 +2,9 @@ const db = require("../db/dbConfig");
 
 const getAllCharacters = async () => {
     try{
-        const allData = await db.any("SELECT * FROM all_Characters");
+        const allData = await db.any(`
+        SELECT * FROM all_Characters`
+        );
         return allData;
     }catch (err){
         return err;

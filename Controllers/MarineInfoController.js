@@ -2,7 +2,7 @@ const express = require("express");
 const marines = express.Router();
 
 const { 
-    getAllMarinesData, 
+    getAllMarinesData, getOneMarineData
 } = require("../queries/marinesInfo")
 
 // Index
@@ -15,6 +15,16 @@ marines.get("/", async (req, res) => {
     }
 });
 
+marines.get("/:id", async (req, res) => {
+    const { id } = req.params;
+    const marineType = await getOneMarineData(id);
+    console.log(marineType)
+    if (marineType.id) {
+      res.json(marineType);
+    } else {
+      res.status(404).json({ error: "marine type not found!" });
+    }
+});
 
 
 module.exports = marines;

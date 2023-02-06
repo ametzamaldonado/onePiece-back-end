@@ -3,7 +3,7 @@ const arcs = express.Router();
 
 const { 
     getAllArcsData, 
-    // getMainArcs 
+    getSubArc 
 } = require("../queries/storyArcInfo")
 
 // Index
@@ -16,24 +16,16 @@ arcs.get("/", async (req, res) => {
     }
 });
 
-// Show <-- doesnt work! Throws error!!
+// Show 
 arcs.get("/:id", async (req, res) => {
     const { id } = req.params;
-    if(sArcs[id]){
-        res.json(sArcs[id])
+    const subArc = await getSubArc(id);
+    if(subArc.id){
+        res.json(subArc)
     } else {
-        res.redirect("*") // Error page. Look at app.js line 24
+        res.status(404).json({ error: "Arc Id not found" })  // Error page. Look at app.js line 24
     }
 });
 
-// Doesnt work to pull main data. Just an attempt to see if it would display
-// arcs.get("/main", async (req, res) => {
-//     const allMainArcData = await getMainArcs();
-//     if(allMainArcData){
-//         res.status(200).json(allMainArcData)
-//     } else {
-//         res.status(500).json({ error: "server error" }) // Error page. Look at app.js line 24
-//     }
-// });
 
 module.exports = arcs;

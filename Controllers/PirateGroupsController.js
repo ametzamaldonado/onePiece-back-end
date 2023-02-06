@@ -12,7 +12,7 @@ pirateGroups.get("/", async (req, res) => {
     if(allPirateGroupData){
         res.status(200).json(allPirateGroupData)
     } else {
-        res.status(500).json({ error: "server error" }) // Error page. Look at app.js line 24
+        res.status(404).json({ error: "No pirate group data found" }) // Error page. Look at app.js line 24
     }
 });
 
@@ -23,7 +23,7 @@ pirateGroups.get("/:id", async (req, res) => {
     if(pirateGroupData){
         res.status(200).json(pirateGroupData)
     } else {
-        res.status(500).json({ error: "server error" }) // Error page. Look at app.js line 24
+        res.status(404).json({ error: "Can't find pirate group data" }) // Error page. Look at app.js line 24
     }
 });
 

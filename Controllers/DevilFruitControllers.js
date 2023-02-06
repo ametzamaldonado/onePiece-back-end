@@ -14,7 +14,7 @@ devilFruits.get("/", async (req, res) => {
     }
 });
 
-// Show <-- doesnt work! Throws error!!
+// Show 
 devilFruits.get("/:id", async (req, res) => {
     const { id } = req.params;
     const devilFruit = await getDevilFruit(id);
@@ -22,7 +22,7 @@ devilFruits.get("/:id", async (req, res) => {
     if (devilFruit.id) {
       res.json(devilFruit);
     } else {
-      res.status(404).json({ error: "user not found" });
+      res.status(404).json({ error: "devil fruit not found!" });
     }
 });
 

@@ -4,7 +4,14 @@ const getAllMarinesData = async () => {
     try{
         const allMarineData = await db.any(
             // code as is works!
-            "SELECT marine_Ranks.id, marine_Ranks.nameOfRank, marine_Ranks.info, marine_RankTypes.id AS marineRankTypesId, marine_RankTypes.typeOfRank FROM marine_Ranks JOIN marine_RankTypes ON marine_Ranks.rankType = marine_RankTypes.id;"
+            `SELECT mR.id, 
+                mR.nameOfRank, 
+                mR.info, 
+                mRT.id AS marineRankTypes_Id, 
+                mRT.typeOfRank 
+            FROM marine_Ranks mR
+            JOIN marine_RankTypes mRT
+            ON mR.rankType = mRT.id`
             );
         return allMarineData;
     }catch (err){
@@ -12,6 +19,27 @@ const getAllMarinesData = async () => {
     }
 }
 
+const getOneMarineData = async (id) => {
+    try{
+        const oneMarineData = await db.one(
+            // code as is works!
+            `SELECT mR.id, 
+                mR.nameOfRank, 
+                mR.info, 
+                mRT.id AS marineRankTypes_Id, 
+                mRT.typeOfRank 
+            FROM marine_Ranks mR
+            JOIN marine_RankTypes mRT
+            ON mR.rankType = mRT.id
+            WHERE mR.id = $1`, id
+            );
+        return oneMarineData;
+    }catch (err){
+        return err;
+    }
+}
+
+
 module.exports = { 
-    getAllMarinesData, 
+    getAllMarinesData, getOneMarineData 
 };
