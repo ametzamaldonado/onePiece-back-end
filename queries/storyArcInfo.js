@@ -41,12 +41,30 @@ const getSubArc = async (id) => {
     }
 }
 
-
+// const getSagas = async () => {
+//     try {
+//         const sagasData = await db.any (
+//             `SELECT 
+//                 sagas.* , 
+//                 sArcs.*,
+//                 mArcs.name AS mainArcs_name  
+//             FROM story_Saga sagas
+//             JOIN main_arcs mArcs
+//             ON sagas.id = mArcs.saga_id 
+//             JOIN sub_arcs sArcs  
+//             ON sArcs.main_arcs_id = mArcs.id
+//             ORDER BY sagas.id`
+//         );
+//         return sagasData
+//     } catch (err) {
+//         return err
+//     }
+// }
 
 
 
 
 module.exports = { 
     getAllArcsData, 
-    getSubArc 
+    getSubArc
 };

@@ -3,7 +3,7 @@ const arcs = express.Router();
 
 const { 
     getAllArcsData, 
-    getSubArc 
+    getSubArc
 } = require("../queries/storyArcInfo")
 
 // Index
@@ -26,6 +26,15 @@ arcs.get("/:id", async (req, res) => {
         res.status(404).json({ error: "Arc Id not found" })  // Error page. Look at app.js line 24
     }
 });
+
+// arcs.get("/sagas", async (req, res) => {
+//     const sagas = await getSagas();
+//     if(sagas.id){
+//         res.json(sagas)
+//     } else {
+//         res.status(404).json({ error: "Sagas not found" })  // Error page. Look at app.js line 24
+//     }
+// });
 
 
 module.exports = arcs;

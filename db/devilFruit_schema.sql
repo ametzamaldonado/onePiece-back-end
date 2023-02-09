@@ -19,7 +19,7 @@ CREATE TABLE devil_fruits (
     org_name TEXT NOT NULL,
     eng_name TEXT,
     canon BOOLEAN,
-    movie TEXT,2
+    movie TEXT,
     photo TEXT,
     descr TEXT NOT NULL,
     awakened TEXT,
