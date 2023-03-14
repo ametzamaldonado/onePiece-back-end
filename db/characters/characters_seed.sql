@@ -233,9 +233,9 @@ Every day Usopp would tell the same lie, that his father had returned to take th
 
 ('Bomba', true, 'Bomba is a dwarf from Tontatta Kingdom. He is one of the two vice chiefs of the Tontatta Kingdom along with Rampo, under Gancho and Leo, and serves under Leo in the Tontatta Pirates. He is the elder brother of Bobomba.', true, true, false, null, 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/05018cf7-3182-4470-a12c-7075477d4a21/d7759vj-1cd87c53-a3c8-4b80-991a-81f8e729d934.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzA1MDE4Y2Y3LTMxODItNDQ3MC1hMTJjLTcwNzU0NzdkNGEyMVwvZDc3NTl2ai0xY2Q4N2M1My1hM2M4LTRiODAtOTkxYS04MWY4ZTcyOWQ5MzQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.SXrMkkap0H23y5L9yCjAHRYveJS1CYyWpcMHOTuHypE', null, 39, null),
 
-('Bongo', true, 'Bongo is a former lumber dealer who currently lives in Ebisu Town in Wano Country.[4] He formerly lived in the Flower Capital, but was exiled after being swindled by Komurasaki.', true, false, false, 'wano civilian', null, null, null, null ),
+('Bongo', true, 'Bongo is a former lumber dealer who currently lives in Ebisu Town in Wano Country.[4] He formerly lived in the Flower Capital, but was exiled after being swindled by Komurasaki.', true, false, false, 'wano civilian', null, null, null, null )
 
-('')
+
 
 -- name, alive, info, canon, pirate, marine, other, photo, devil_fruitID, pirate_groupID, marine_RanksID
 ;
