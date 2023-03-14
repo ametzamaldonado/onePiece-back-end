@@ -2,7 +2,7 @@ const express = require("express");
 const devilFruits = express.Router();
 
 // FOLLOW 'ALL' CONTROLLER!! IT WORKS!
-const { getAllData, getDevilFruit } = require("../queries/devilFruitInfo")
+const { getAllData, getDevilFruit } = require("../../queries/devilFruitInfo")
 
 // Index
 devilFruits.get("/", async (req, res) => {

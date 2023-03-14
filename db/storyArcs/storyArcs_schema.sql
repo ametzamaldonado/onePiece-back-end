@@ -4,7 +4,8 @@ DROP TABLE IF EXISTS story_Saga CASCADE;
 
 CREATE TABLE story_Saga (
     id SERIAL PRIMARY KEY, 
-    name TEXT NOT NULL
+    name TEXT NOT NULL,
+    mainArcs TEXT[]
 );
 
 DROP TABLE IF EXISTS main_arcs CASCADE;
@@ -26,5 +27,6 @@ CREATE TABLE sub_arcs (
     filler BOOLEAN,
     special BOOLEAN,
     image TEXT NOT NULL,
+    descr TEXT,
     main_arcs_id INTEGER REFERENCES main_arcs (id)
 );

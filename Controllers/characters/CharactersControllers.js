@@ -2,7 +2,7 @@ const express = require("express");
 const characters = express.Router();
 
 // FOLLOW 'ALL' CONTROLLER!! IT WORKS!
-const { getAllCharacters, getCharacters } = require("../queries/characters")
+const { getAllCharacters, getCharacters } = require("../../queries/characters")
 
 // Index
 characters.get("/", async (req, res) => {
@@ -25,6 +25,7 @@ characters.get("/:id", async (req, res) => {
       res.status(404).json({ error: "user not found" });
     }
 });
+
 
 
 module.exports = characters;

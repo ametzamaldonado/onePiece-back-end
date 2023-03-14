@@ -3,7 +3,7 @@ const marines = express.Router();
 
 const { 
     getAllMarinesData, getOneMarineData
-} = require("../queries/marinesInfo")
+} = require("../../queries/marinesInfo")
 
 // Index
 marines.get("/", async (req, res) => {

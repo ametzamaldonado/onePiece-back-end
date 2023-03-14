@@ -4,7 +4,7 @@ const pirateGroups = express.Router();
 const { 
     getAllPirateGroupData, 
     getPirateGroup,
-} = require("../queries/pirateGroups")
+} = require("../../queries/pirateGroups")
 
 // Index
 pirateGroups.get("/", async (req, res) => {

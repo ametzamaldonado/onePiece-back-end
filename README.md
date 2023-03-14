@@ -34,3 +34,4 @@ Types of 'other' categories:
 - 'G5'
 - 'queen'
 - 'syrup village civilian'
+- 'mink'

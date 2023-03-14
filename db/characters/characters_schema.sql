@@ -5,7 +5,7 @@ DROP TABLE IF EXISTS all_Characters;
 CREATE TABLE all_Characters (
     id SERIAL PRIMARY KEY,
     name TEXT NOT NULL, 
-    alive BOOLEAN,
+    alive TEXT,
     info TEXT,
     canon BOOLEAN,
     pirate BOOLEAN,

@@ -25,5 +25,4 @@ const getCharacters = async (id) => {
 
 
 
-
 module.exports = { getAllCharacters, getCharacters };

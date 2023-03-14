@@ -8,5 +8,5 @@ CREATE TABLE pirate_GroupNames (
     romanized_name TEXT,
     canon BOOLEAN,
     info TEXT,
-    jollyRoger TEXT NOT NULL
+    jollyRoger TEXT
 );
